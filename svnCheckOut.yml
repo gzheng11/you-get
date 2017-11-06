@@ -2,7 +2,7 @@
   hosts: all
   tasks:
   - name: Update code on app servers
-    subversion: repo=http://svn-01-dev-1.you-get.com/svn/repository/Integrations/DSPPortal/trunk/DSPConnectorPortalModule/ 
-                dest=/src/checkout 
+    subversion: repo={{ SVN_REPO }} 
+                dest={{ SVN_DST }} 
                 username=gzheng
                 password=YouGet1234
