@@ -7,4 +7,4 @@
     subversion: repo={{ SVN_REPO }} 
                 dest={{ SVN_DST }} 
                 username={{ SVN_USER_NAME }} 
-                password=YouGet1234
+                password={{ SVN_USER_PASSWORD }} 
