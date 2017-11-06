@@ -1,12 +1,7 @@
-- name: Check out SVN Repository
+- name: Transfer and execute a script.
   hosts: all
-  vars_files:
-  - "var_{{ TOWER_ENV }}.yml"
   tasks:
-  - name: Check out SVN Repository
-    subversion: repo={{ SVN_REPO }} 
-                dest={{ SVN_DST }} 
-                username={{ SVN_USER_NAME }} 
-                password={{ SVN_USER_PASSWORD }}
-    become: yes
-    become_user: bpmadmin
+  - name: touch
+    shell: /home/bpmadmin/output
+  - name: copy11
+    shell: /opt/ibm/BPM/v8.5/java_1.7_64/bin/java -jar /home/bpmadmin/serviceBuilder.jar
