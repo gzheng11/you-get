@@ -2,7 +2,7 @@
   hosts: all
   tasks:
   - name: cd
-    shell: /home/bpmadmin/output
+    shell: cd /home/bpmadmin/output
     become: yes
     become_user: bpmadmin
   - name: run jar
