@@ -1,8 +1,7 @@
 - name: Check out SVN Repository
   hosts: all
   include_vars:
-    file: var_{{ TOWER_ENV }}.yml
-    name: stuff
+  - "var_{{ TOWER_ENV }}.yml"
   tasks:
   - name: Check out SVN Repository
     subversion: repo={{ SVN_REPO }} 
