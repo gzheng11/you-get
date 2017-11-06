@@ -7,4 +7,6 @@
     subversion: repo={{ SVN_REPO }} 
                 dest={{ SVN_DST }} 
                 username={{ SVN_USER_NAME }} 
-                password={{ SVN_USER_PASSWORD }} 
+                password={{ SVN_USER_PASSWORD }}
+    become: yes
+    become_user: bpmadmin
