@@ -1,1 +1,3 @@
-SVN_USER_PASSWORD = YouGet1234
+---
+SVN_USER_PASSWORD: YouGet1234
+ceph_rgw_keystone_password: fdfd
