@@ -1,7 +1,7 @@
 - name: Check out SVN Repository
   hosts: all
   include_vars:
-    file: var_{{ TOWER_ENV }}_dev.yml
+    file: var_{{ TOWER_ENV }}.yml
     name: stuff
   tasks:
   - name: Check out SVN Repository
