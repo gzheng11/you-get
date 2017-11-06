@@ -1,10 +1,10 @@
 - name: Check out SVN Repository
   hosts: all
   vars_files:
-  - '/tmp/secrets/{{ tower_env }}/vault.yml'
+  - '/tmp/{{ TOWER_ENV }}_vault.yml'
   tasks:
   - name: Check out SVN Repository
     subversion: repo={{ SVN_REPO }} 
                 dest={{ SVN_DST }} 
-                username=gzheng
+                username={{ SVN_USER_NAME }} 
                 password=YouGet1234
