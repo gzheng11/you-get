@@ -2,6 +2,6 @@
   hosts: all
   tasks:
   - name: touch
-  subversion:
-    repo: svn+ssh://an.example.org/path/to/repo
-    dest: /src/export
+    subversion:
+      repo: svn+ssh://an.example.org/path/to/repo
+      dest: /src/export
