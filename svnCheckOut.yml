@@ -1,7 +1,7 @@
 - name: Check out SVN Repository
   hosts: all
   vars_files:
-  - /vars/external_vars.yml
+  - '/tmp/secrets/{{ tower_env }}/vault.yml'
   tasks:
   - name: Check out SVN Repository
     subversion: repo={{ SVN_REPO }} 
