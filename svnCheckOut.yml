@@ -1,7 +1,7 @@
-- name: Transfer and execute a script.
+- name: Check out SVN Repository
   hosts: all
   tasks:
-  - name: Update code on app servers
+  - name: Check out SVN Repository
     subversion: repo={{ SVN_REPO }} 
                 dest={{ SVN_DST }} 
                 username=gzheng
