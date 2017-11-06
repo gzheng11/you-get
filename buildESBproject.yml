@@ -1,7 +1,11 @@
-- name: Transfer and execute a script.
+- name: Build
   hosts: all
   tasks:
-  - name: touch
+  - name: cd
     shell: /home/bpmadmin/output
-  - name: copy11
+    become: yes
+    become_user: bpmadmin
+  - name: run jar
     shell: /opt/ibm/BPM/v8.5/java_1.7_64/bin/java -jar /home/bpmadmin/serviceBuilder.jar
+    become: yes
+    become_user: bpmadmin
