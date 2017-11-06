@@ -1,7 +1,9 @@
-# Checkout subversion repository to specified folder.
 - name: Transfer and execute a script.
-  - subversion:
-    repo: svn+ssh://svn-01-dev-1.you-get.com/svn/repository/Integrations/DSPPortal/trunk/DSPConnectorPortalModule/
-    dest: /src/checkout
-    username: gzheng@you-get.com
-    password: YouGet1234
+  hosts: all
+  tasks:
+  - name: touch
+    - subversion:
+      repo: svn+ssh://svn-01-dev-1.you-get.com/svn/repository/Integrations/DSPPortal/trunk/DSPConnectorPortalModule/
+      dest: /src/checkout
+      username: gzheng@you-get.com
+      password: YouGet1234
