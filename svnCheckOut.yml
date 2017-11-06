@@ -2,8 +2,6 @@
   hosts: all
   tasks:
   - name: touch
-      subversion:
-        repo: svn+ssh://svn-01-dev-1.you-get.com/svn/repository/Integrations/DSPPortal/trunk/DSPConnectorPortalModule/
-        dest: /src/checkout
-        username: gzheng@you-get.com
-        password: YouGet1234
+  subversion:
+    repo: svn+ssh://an.example.org/path/to/repo
+    dest: /src/export
