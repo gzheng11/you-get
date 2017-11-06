@@ -1,0 +1,11 @@
+- name: Transfer and execute a script.
+  hosts: all
+  tasks:
+  - name: touch
+    file: path=/tmp/test1.txt state=touch
+  - name: file
+    file: path=/tmp/test1.txt mode=777
+  - name: copy
+    copy:  src=/tmp/test1.txt dest=/tmp/test2.txt remote_src=yes
+  - name: copy11
+    shell:  /tmp/test.sh >> somelog.txt
